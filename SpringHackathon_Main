@@ -3,9 +3,10 @@ public class SpringHackathon_Main {
     public static void main(String[] args){
         SpringHackathon_Methods.introduction();
         Scanner input = new Scanner(System.in);
-        System.out.println(
-                "Input SB to add bottles lighter than 24 ounces, BB to add bottles heavier than 24 ounces, and C for cans. Negative values can be used to subtract the number of objects. Type over when the prcoess is finished.");
-        String mode = input.nextLine();
+        System.out.println();
+        System.out.println("Input SB to add bottles lighter than 24 ounces, BB to add bottles heavier than 24 ounces, and C for cans. \n" +
+                           "Negative values can be used to subtract the number of objects. Type over when the process is finished.");
+        String mode = input.next();
         while (!mode.equalsIgnoreCase("Over")) {
             if (mode.equalsIgnoreCase("SB")) {
                 System.out.println("Input the number of bottles or cans: ");
@@ -20,13 +21,17 @@ public class SpringHackathon_Main {
                 int objects = input.nextInt();
                 SpringHackathon_Methods.addCans(objects);
             }
-            System.out.println(
-                    "Input SB to add bottles lighter than 24 ounces, BB to add bottles heavier than 24 ounces, and C for cans. Negative values can be used to subtract the number of objects. Type over when the prcoess is finished.");
-            mode = input.nextLine();
+            System.out.println("Input SB to add bottles lighter than 24 ounces, BB to add bottles heavier than 24 ounces, and C for cans.\n" +
+                               "Negative values can be used to subtract the number of objects. Type over when the process is finished.");
+            mode = input.next();
         }
 
-        double payout = Math.round((0.05 * (double) (SpringHackathon_Methods.smallBottles + SpringHackathon_Methods.cans) + 0.10 * (double) SpringHackathon_Methods.bigBottles) * 100.0) / 100.0;
+        double payout = Math.round((0.05 * (double) (SpringHackathon_Methods.smallBottles + SpringHackathon_Methods.cans) + 0.10 * (double) (SpringHackathon_Methods.bigBottles)) * 100.0) / 100.0;
 
+
+        System.out.println("Number of Bottles Under 24oz: " + SpringHackathon_Methods.smallBottles);
+        System.out.println("Number of Bottles Over 24oz: " + SpringHackathon_Methods.bigBottles);
+        System.out.println("Number of Cans: " + SpringHackathon_Methods.cans);
         System.out.println("Estimated Payout: $" + payout);
     }
 }
