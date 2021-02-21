@@ -1,4 +1,26 @@
 public class SpringHackathon_Methods {
+    //instance variables
+    public int smallBottles = 0;
+    public int bigBottles = 0;
+    public int cans = 0;
+    private double revenue = 0;
+    //constructors
+    public SpringHackathon_Methods(){
+        smallBottles = 0;
+        bigBottles = 0;
+        cans = 0;
+    }
+    //nonstatic methods
+    public void addSmallBottles(int sb){
+        if(sb >= 0) smallBottles = smallBottles + sb;
+    }
+    public void addBigBottles(int bb){
+        if(bb >= 0) bigBottles = bigBottles + bb;
+    }
+    public void addCans(int c){
+        if(c >= 0) cans = cans + c;
+    }
+    //static methods
     public static void introduction(){
         System.out.println("Welcome to [name of program]! We seek to aid our society in the pursuit of recycling, " +
                            "to pave the way for a more abundant and less wasteful world.");
