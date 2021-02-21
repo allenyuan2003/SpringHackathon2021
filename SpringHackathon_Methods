@@ -1,0 +1,15 @@
+public class SpringHackathon_Methods {
+    public static void introduction(){
+        System.out.println("Welcome to [name of program]! We seek to aid our society in the pursuit of recycling, " +
+                           "to pave the way for a more abundant and less wasteful world.");
+        System.out.println("However, one does not have to pursue these efforts purely out of their own goodwill, " +
+                            "as used disposable containers can be redeemed at a local recycling \n" +
+                            "center for cold hard cash. [name of program] estimates how much revenue you will gain from redeeming your stash, " +
+                            "based on the amount of containers you possess.");
+        System.out.println();
+        System.out.println("Acceptable containers include plastic bottles under 24 oz, plastic bottles over 24 oz, and aluminum cans. " +
+                           "Only beverage containers, with the exception \n" + "of milk and alcohol, are acceptable for redeeming. Food, " +
+                           "infant formula, and other non-beverage containers also cannot be redeemed. Your containers \nshould also be clean " +
+                           "and emptied, otherwise, you run the risk of your load being rejected.");
+    }
+}
