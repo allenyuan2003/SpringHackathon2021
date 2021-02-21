@@ -12,13 +12,19 @@ public class SpringHackathon_Methods {
     }
     //nonstatic methods
     public void addSmallBottles(int sb){
-        smallBottles = smallBottles + sb;
+        if(smallBottles + sb > 0){
+            smallBottles = smallBottles + sb;
+        }
     }
     public void addBigBottles(int bb){
-        bigBottles = bigBottles + bb;
+        if(bigBottles + bb > 0){
+            bigBottles = bigBottles + bb;
+        }
     }
     public void addCans(int c){
-        cans = cans + c;
+        if(cans + c > 0){
+            cans = cans + c;
+        }
     }
     //static methods
     public static void introduction(){
