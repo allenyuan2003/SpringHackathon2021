@@ -1,27 +1,21 @@
 public class SpringHackathon_Methods {
-    //instance variables
-    public int smallBottles = 0;
-    public int bigBottles = 0;
-    public int cans = 0;
-    private double revenue = 0;
-    //constructors
-    public SpringHackathon_Methods(){
-        smallBottles = 0;
-        bigBottles = 0;
-        cans = 0;
-    }
-    //nonstatic methods
-    public void addSmallBottles(int sb){
+    //class variables
+    public static int smallBottles = 0;
+    public static int bigBottles = 0;
+    public static int cans = 0;
+    private static double revenue = 0;
+    //static methods
+    public static void addSmallBottles(int sb){
         if(smallBottles + sb > 0){
             smallBottles = smallBottles + sb;
         }
     }
-    public void addBigBottles(int bb){
+    public static void addBigBottles(int bb){
         if(bigBottles + bb > 0){
             bigBottles = bigBottles + bb;
         }
     }
-    public void addCans(int c){
+    public static void addCans(int c){
         if(cans + c > 0){
             cans = cans + c;
         }
