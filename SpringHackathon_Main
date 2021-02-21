@@ -1,5 +1,28 @@
 public class SpringHackathon_Main {
     public static void main(String[] args){
         SpringHackathon_Methods.introduction();
+        	Scanner input = new Scanner(System.in);
+		System.out.println(
+				"Input SB to add bottles lighter than 24 ounces, BB to add bottles heavier than 24 ounces, and C for cans. Negative values can be used to subtract the number of objects. Type over when the prcoess is finished.");
+		String mode = input.nextLine();
+		while (!mode.equalsIgnoreCase("Over")) {
+			System.out.println("Input the number of bottles or cans: ");
+			int objects = input.nextInt();
+			if (mode.equalsIgnoreCase("SB")) {
+				  SpringHackathon_Methods.addSmallBottles(objects);
+			} else if (mode.equalsIgnoreCase("BB")) {
+				  SpringHackathon_Methods.addBigBottles(objects);
+			} else if (mode.equalsIgnoreCase("C")) {
+				  SpringHackathon_Methods.addCans(objects);
+			}
+			System.out.println(
+					"Input SB to add bottles lighter than 24 ounces, BB to add bottles heavier than 24 ounces, and C for cans. Negative values can be used to subtract the number of objects. Type over when the prcoess is finished.");
+			mode = input.nextLine();
+		}
+
+		double payout = Math.round((0.05 * (double) smallBottles + 0.10 * (double) bigBottles) * 100.0) / 100.0;
+
+		System.out.println("Estimated Payout: $" + payout);
+	}
     }
 }
