@@ -1,5 +1,5 @@
 public class SpringHackathon_Methods {
-    //class variables
+    //instance variables
     public static int smallBottles = 0;
     public static int bigBottles = 0;
     public static int cans = 0;
@@ -20,7 +20,6 @@ public class SpringHackathon_Methods {
             cans = cans + c;
         }
     }
-    //static methods
     public static void introduction(){
         System.out.println("Welcome to [name of program]! We seek to aid our society in the pursuit of recycling, " +
                            "to pave the way for a more abundant and less wasteful world.");
@@ -34,4 +33,21 @@ public class SpringHackathon_Methods {
                            "infant formula, and other non-beverage containers also cannot be redeemed. Your containers \nshould also be clean " +
                            "and emptied, otherwise, you run the risk of your load being rejected.");
     }
+    public static double money(){
+        double rV = 0;
+        rV = rV + smallBottles * 0.05;
+        rV = rV + bigBottles * 0.10;
+        rV = rV + cans * 0.05;
+        rV = (double) Math.round(rV * 100)/100;
+        return rV;
+    }
+
+    public static String moneyToString(double m){
+        String rV = m + "";
+        if((m * 100) % 10 == 0){
+            rV = m + "0";
+        }
+        return rV;
+    }
+
 }
