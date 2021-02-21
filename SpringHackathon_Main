@@ -20,7 +20,7 @@ public class SpringHackathon_Main {
 			mode = input.nextLine();
 		}
 
-		double payout = Math.round((0.05 * (double) smallBottles + 0.10 * (double) bigBottles) * 100.0) / 100.0;
+		double payout = Math.round((0.05 * (double) (smallBottles + cans) + 0.10 * (double) bigBottles) * 100.0) / 100.0;
 
 		System.out.println("Estimated Payout: $" + payout);
 	}
